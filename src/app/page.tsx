@@ -9,7 +9,7 @@ import { People } from "@/types/people";
 
 export default function Home() {
   const [name, setName] = useState('');
-  const nameRef = useRef(null);
+  const nameRef = useRef<HTMLInputElement>(null);
   const { data, error, isLoading } = useSWR(name ? `/people?name=${name}` : '/people');
 
   const handleSearch = () => {
