@@ -5,32 +5,30 @@ import { usePathname } from "next/navigation";
 
 export default function HeaderNav() {
   const asPath = usePathname()
-
-  console.log("Pathl", asPath)
   return (
-    <Navbar shouldHideOnScroll>
+    <Navbar shouldHideOnScroll isBordered maxWidth="xl">
       <NavbarBrand>
         <AcmeLogo />
         <p className="font-bold text-inherit">May the Force be with you</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem isActive={ asPath === "/"}>
-          <Link color="foreground" href="/">
+        <NavbarItem isActive={ asPath == "/"}>
+          <Link color={asPath == "/" ? '' : 'foreground'} href="/" aria-current="page">
             Personajes
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={ asPath === "/films"}>
-          <Link href="#">
+        <NavbarItem isActive={ asPath == "/films"}>
+          <Link color={asPath == "/films" ? '' : 'foreground'} href="/films" aria-current="page">
             Peliculas
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={ asPath === "/starships"}>
-          <Link color="foreground" href="#">
+        <NavbarItem isActive={ asPath == "/starships"}>
+          <Link color={asPath == "/starships" ? '' : 'foreground'} href="/starships" aria-current="page">
             Naves
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={ asPath === "/planets"}>
-          <Link color="foreground" href="#">
+        <NavbarItem isActive={ asPath ==="/planets"}>
+          <Link color={asPath == "/planets" ? '' : 'foreground'} href="/planets" aria-current="page">
             Planetas
           </Link>
         </NavbarItem>

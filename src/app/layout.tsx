@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className='dark'>
+    <html lang="en" className='dark min-h-screen'>
       <body className={inter.className}>
         <div className="flex min-h-screen flex-col overflow-x-none">
           <HeaderNav />
