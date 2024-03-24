@@ -13,22 +13,22 @@ export default function HeaderNav() {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem isActive={ asPath == "/"}>
-          <Link color={asPath == "/" ? '' : 'foreground'} href="/" aria-current="page">
+          <Link color={asPath == "/" ? 'primary' : 'foreground'} href="/" aria-current="page">
             Personajes
           </Link>
         </NavbarItem>
         <NavbarItem isActive={ asPath == "/films"}>
-          <Link color={asPath == "/films" ? '' : 'foreground'} href="/films" aria-current="page">
+          <Link color={asPath == "/films" ? 'primary' : 'foreground'} href="/films" aria-current="page">
             Peliculas
           </Link>
         </NavbarItem>
         <NavbarItem isActive={ asPath == "/starships"}>
-          <Link color={asPath == "/starships" ? '' : 'foreground'} href="/starships" aria-current="page">
+          <Link color={asPath == "/starships" ? 'primary' : 'foreground'} href="/starships" aria-current="page">
             Naves
           </Link>
         </NavbarItem>
         <NavbarItem isActive={ asPath ==="/planets"}>
-          <Link color={asPath == "/planets" ? '' : 'foreground'} href="/planets" aria-current="page">
+          <Link color={asPath == "/planets" ? 'primary' : 'foreground'} href="/planets" aria-current="page">
             Planetas
           </Link>
         </NavbarItem>
