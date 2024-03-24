@@ -18,7 +18,7 @@ export default function CardItem({ item, className, extended, asPath, noFooter }
   if (!item) return <div>Null</div>
 
   return (
-    <Card className={`w-[280px] m-4 ${className}`}>
+    <Card className={`w-[280px] m-4 ${className} animate-fade-up animate-once`}>
       <CardHeader className="flex gap-3">
         <Image
           alt="nextui logo"
