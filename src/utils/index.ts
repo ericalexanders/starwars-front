@@ -15,7 +15,8 @@ const parserObj: ParserObj = {
     extended2: `Color de ojos: ${item.eye_color}`,
     extended3: `Masa: ${item.mass}`,
     url: item.url,
-    rgx: /\/people\/(\d+)\//
+    rgx: /\/people\/(\d+)\//,
+    img: item?.img
   }),
   '/films': (item: Films):ItemCard => ({
     title: item.title,

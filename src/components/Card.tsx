@@ -20,13 +20,15 @@ export default function CardItem({ item, className, extended, asPath, noFooter }
   return (
     <Card className={`w-[280px] m-4 ${className} animate-fade-up animate-once`}>
       <CardHeader className="flex gap-3">
-        <Image
-          alt="nextui logo"
-          height={40}
-          radius="sm"
-          src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-          width={40}
-        />
+          <div className="max-h-[80px] overflow-hidden rounded-3xl">
+            <Image
+              alt="nextui logo"
+              width={100}
+              src={item.img || 'https://avatars.githubusercontent.com/u/86160567?s=200&v=4'}
+              removeWrapper
+              className="min-h-[80px] object-cover"
+            />
+          </div>
         <div className="flex flex-col">
           <p className="text-md">{item.title}</p>
           <p className="text-small text-default-500">Genero: {item.header}</p>

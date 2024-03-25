@@ -13,7 +13,7 @@ export function Providers({children}: { children: React.ReactNode }) {
     <NextUIProvider navigate={router.push}>
       <SWRConfig 
         value={{
-          refreshInterval: 3000,
+          refreshInterval: 1000 * 60 * 60,
           fetcher
         }}
       >

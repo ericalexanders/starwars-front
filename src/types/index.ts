@@ -15,6 +15,7 @@ export interface People {
   "created": string;
   "edited": string;
   "url": string;
+  "img"?: string;
 }
 
 export interface Films {
@@ -70,6 +71,7 @@ export interface Planets {
   "created": string;
   "edited": string;
   "url": string;
+  "img": string;
 }
 
 export interface ItemCard {
@@ -82,4 +84,5 @@ export interface ItemCard {
   extended3?: string;
   url?: string;
   rgx?: any
+  img?: string
 }

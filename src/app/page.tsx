@@ -25,6 +25,8 @@ export default function Home() {
 
   if (isLoading) return <Spinner label="Loading..." color="primary" />
 
+  console.log("people", people)
+
   return (
     <main className="flex min-h-screen flex-col items-center px-24 py-14">
       <div className="flex items-center mb-8">
